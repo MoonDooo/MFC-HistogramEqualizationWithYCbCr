@@ -1,0 +1,25 @@
+#pragma once
+
+
+// Histogram 대화 상자입니다.
+
+class Histogram : public CDialogEx
+{
+	DECLARE_DYNAMIC(Histogram)
+
+public:
+	Histogram(CWnd* pParent = NULL);   // 표준 생성자입니다.
+	virtual ~Histogram();
+
+// 대화 상자 데이터입니다.
+#ifdef AFX_DESIGN_TIME
+	enum { IDD = IDD_HISTOGRAM };
+#endif
+
+protected:
+	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 지원입니다.
+
+	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnPaint();
+};
